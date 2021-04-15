@@ -73,20 +73,20 @@
 
         function verificaVitoria(){
             var l,c;
-            for(l=0;l<0;l++){
-                if((jogo[l][0] == jogo[l][1] && jogo[l][1] == jogo[l][2])){
+            for(l=0;l<3;l++){
+                if((jogo[l][0] == jogo[l][1]) && (jogo[l][1] == jogo[l][2])){
                     return jogo[l][0];
                 }
             }
-            for(c=0;c<0;c++){
-                if((jogo[0][c] == jogo[1][c] && jogo[1][c] == jogo[2][c])){
+            for(c=0;c<3;c++){
+                if((jogo[0][c] == jogo[1][c]) && (jogo[1][c] == jogo[2][c])){
                     return jogo[0][c];
                 }
             }
-            if((jogo[0][0] == jogo[1][1] && jogo[1][1] == jogo[2][2])){
+            if((jogo[0][0] == jogo[1][1]) && (jogo[1][1] == jogo[2][2])){
                     return jogo[0][0];
             }
-            if((jogo[0][2] == jogo[1][1] && jogo[1][1] == jogo[2][0])){
+            if((jogo[0][2] == jogo[1][1]) && (jogo[1][1] == jogo[2][0])){
                     return jogo[0][2];
             }
             return "";
