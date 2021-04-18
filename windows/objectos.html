@@ -15,7 +15,47 @@
         var minhajanela2=window.open("text.html","cfb");//podemos direcionar num frame criado com o nome cfb
         var minhajanela2=window.open("text.html","_blank","width=300,heigth=300");//definir tamanho da janela
         var minhajanela2=window.open("text.html","_blank","width=300,heigth=300,top=300,left=300");//defifir posiçao da janela
-        minhajanela.close();//fechar a janela
+        minhajanela.close();//fechar a janela 
+
+        var l,a,px,py;
+        l=window.innerWidth;//largura da janela window.outerwidt largura externa
+        a=window.innerHeight;//altura da janela
+        px=window.screenX;//posição x da janela
+        py=window.screenY;//posição y da janela
+        window.scrollBy(500,500);//rota a tela ate a posição indicada
+        var qtde=window.length;//retorna a quantidade de fremes dentro da pagina
+        window.frames[0].location=["https://www.animestc.net/"];//carregar essa pagina no primeiro frame
+        parent.document.body.style.backgroundColor="#fff";//mudar a cor do objecto pai, caso estivermos a usar um frame
+
+
+        navigator.appName;//retorna o nome do brauser
+        navigator.appVersion;//retorna a versão do navegador
+        navigator.cookieEnabled;//verifica se os cookies estão abilitados
+
+        function localizar(lo){
+            var c=lo.coords;
+            painel.innerHTML+="lat"+c.latitude+c.longitude;
+        }
+
+        navigator.geolocation.getCurrentPosition(localizar);//podemos colocar mais uma funçao separado com . caso der erro
+        navigator.language;
+        navigator.onLine;
+        navigator.platform;
+        navigator.product;
+        navigator.userAgent;
+
+        screen.width;//largura da tela
+        screen.height;
+        screen.availHeight;//altura com a barra de tarefa. 
+        screen.colorDepth;//retorna a profundidade da cor em bit
+        screen.pixelDepth;//retorna a profundidade da cor em pixel
+
+        history.length;//retorna o tamanho do nosso historico de navegação desta janela
+        window.history.back();//voltar no historico de navegação
+        window.history.forward();//avançar no historico de navegação
+        window.history.go(-2);//recuar duas x no historico se quizermos avançar e so tirar o menos
+        
+        
     </script>
 </head>
 <body>

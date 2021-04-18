@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        localStorage.setItem("canal","Campos");//cria um dado na localstorage do navegador chave valor
+        localStorage.removeItem("canal");
+        localStorage.getItem("canal");//obtem o valor com a chave canal
+
+        if(typeof(Storage)!="undefined"){
+            //verificar se o navegador suporta webstorage
+        }
+
+        localStorage.setItem("visitas",1);
+        localStorage.visitas=1;//tanto o de cima como o de baixo resulta no mesmo resultado
+        localStorage.visitas;//retorna o vlor contido na chave visita
+        Number(localStorage.visitas);//converter em numero
+        document.body.style.color="#fff";
+
+        sessionStorage.nome="Pao";// a diferença e que nao grava de forma definitiva
+        sessionStorage.clear();//limpar 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var p=document.createElement("p");
+        p.textContent="FernandoCampos";
+
+        document.body.appendChild(p);//criando elementos html a partir do script
+
+        var t=document.createTextNode("oye oye");
+
+        p.appendChild(t);//colocar texto no p de outra forma
+
+        p.focus();//colocar o cursor no elemento focar elemento
+
+        var pe=document.getElementsByTagName("p");//capta todos p da pagina em forma de vetor
+        var at=document.createAttribute("style");//criar atributo
+        at.value="color:#fff;font-size:300px";//adicionar estilo
+        pe[2].setAttributeNode(at);//colocar o atributo no paragrafo
+        pe[2].removeAttributeNode("style");//remover atributo
+
+        //------------------------------------------------------------------------------------------------
+        lista = document.getElementById("lista");
+
+        var num =lista.childNodes.length;//retorna a quantidade de elementos, sem o lwngth o num vira um vetor e recebe os elementos
+        lista.isertBefore("oye",lista.childNodes[0])//ira inserir oye antes do primeiro elemento
+
+        //---------------------------------------------------------------------------------------------------
+
+        var novoh=document.createElement("h1");
+        var sub=2;
+        var listacurso=document.getElementById("sfb");
+        var antigoP=listacurso.childNodes[sub];
+        listacurso.replaceChild(novoh,antigoP);//sobstituir 
+
+        //-----------------------------------------------------------------------------------------------------
+
+        var elemento= document.getElementById("p5");
+        elemento.parentNode;//retorna o nome do pai mais dados desnecessario
+        elemento.parentNode.nodeName;//retorna o neme do pai
+        elemento.remove();//eliminar elemento
+        removeChild(pe[1]);//remover o filho
+
+        //-----------------------------------------------------------------------------------------------------
+
+        var elemento= document.getElementById("p1");
+        var att=elemento.getAttribute("class");//vai retornar  o nome da class
+        console.log("oyeoye");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
