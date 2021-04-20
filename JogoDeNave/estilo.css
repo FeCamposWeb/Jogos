@@ -1,15 +1,65 @@
 body{
     overflow-x: hidden;
     overflow-y: hidden;
-    background-color: #fff;
+    background-color:black;
 }
 
 .naveJog{
-    width: 40px;
-    height: 40px;
-    background-image: url("imagens/nave.png");
+    width: 48px;
+    height: 48px;
+    background:url("imagens/nave.PNG");
     position: absolute;
 }
 .telaMsg{
-    
+    position:absolute;
+    margin-left: -25%;
+    top:50px;
+    left:50%;
+    width: 720px;
+    height: 621px;
+    display: none;
+}
+#Medidor{
+    border: 2px solid black;
+    width: 300px;
+    height: 20px;
+    background-color: blanchedalmond;
+}
+#barra{
+    width: 300px;
+    height: 20px;
+    background-color: rgb(33, 211, 17);
+}
+
+.tiroJog{
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.bomba{
+    width: 48px;
+    height: 48px;
+    background-image: url(imagens/bomba.png);
+    position: absolute;
+}
+
+.explosao{
+    width: 48px;
+    height: 48px;
+    background-image: url(imagens/fogo2.png);
+    position: absolute;
+}
+
+.telaMsg{
+    position:absolute;
+    border: 1px solid white;
+    margin-left: 25%;
+    top:50px;
+    left:0%;
+    width: 720px;
+    height: 560px;
+    display: none;
 }
