@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let nome="Fernando da Silva Campos"
+        nome[0]//F
+        console.log(nome.startsWith("Fernando"))//se a string começa com Fernando retorna true
+        console.log(nome.startsWith("Fernando" ? "verdade" : "Mentira"))
+        nome.endsWith("s")//verifica se termina com o
+        nome.includes("de")//verifica se existe na tring retorna true ou false
+
+        nome.repeat(2)//repete a string 2*
+        //___________________________________INTERATOR______________________________________________________________________
+        let num=[10,3,45,6,78,8,9]
+        for(n of num)
+            console.log(n)
+
+        let it=num[Symbol.iterator]()
+        it.next().value//le o primeiro elemento
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

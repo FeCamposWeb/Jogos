@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num=100
+        let num2=200;//não se pode criar duas let com mesmo nome no mesmo scopo
+        const num3=100
+
+        const dobro=(n)=>{
+            return n*2
+        }
+        num==n2 ? console.log("igual") : console.log("false")
+        num == true ?("igual"):("diferente")
+
+        num=true && "Igual"//num sera = igual
+
+        const notas=[100,20,30,40]
+        console.log(...notas)//vai imprimir os elementos de forma individual
+
+        function soma(n1,n2,n3,n4){
+            return n1+n2+n3+n4
+        }
+        console.log(soma(...notas))//funciona cara incrivel
+
+        const jogador=[
+            nom2="Fernando",
+            numero=12,
+            idade=30
+        ]//podemos espandir essa sena
+
+        const produtos=[
+            {
+                id="01",
+                desc:['mause','23']
+            },
+            {
+                id="02",
+                desc:['teclado','43']
+            },
+            {
+                id="02",
+                desc:['teclado','43']
+            }
+        ]
+        const p=[...produtos]//cada elemento vai ficar uma posiçao deste novo arrey
+
+        for(var dado in produtos){
+            console.log(dado)//implime os dados
+            console.log(produtos(dado))//imprime o valor
+            console.log(info(dado))//
+        }
+
+        let notas =[12,11,111,34,56,754,32];
+        for(var n of notas){//le direitamente o resultado
+            console.log(n)
+        }
+        for(var n in notas){
+            console.log(notas[n])
+        }
+
+        //------------------------------Parametro Rest------------------------------------------------------------------------
+
+        function soma(na,n2){
+            let res=na+n2
+            return res
+        }
+
+        function soma2(...num){
+            let qtd=num.length
+            let res=0
+            for(let i=0;i<=qtd;i++){
+                res+=num[i]
+            }
+            return res
+        }
+
+        //-----------------------------------Função Anônima-------------------------------------------------------------------
+
+        const alo=function(){
+            return "ola mundo"
+        }
+
+        console.log(alo)
+        console.log(alo())
+
+        const som= function(...num){
+            let qtd=num.length
+            let res=0
+            for(let i=0;i<=qtd;i++){
+                res+=num[i]
+            }
+            return res
+        }
+
+        //----------------------------------Função Construtora-------------------------------------------------------------------------
+
+        let soma3=new Function("n1,n2","return n1+n2")
+        soma3(1,2)
+
+        //______________________________________Arrow Função_____________________________________________________________________
+    
+        //função de seta (parametros)=>expressao
+
+        const soma5=(p1,p2)=>{
+            return p1+p2
+        }
+        const soma5=(...n)=>{
+            let r=0
+            for(n of num)
+                r+=n
+            return r
+        }
+
+        soma5(1,2,3,44,23)
+
+        const par=num=>{
+            if(num%2 == 0)
+                return true
+            else
+                return false
+        }
+
+        par(4)//verificando se esse numero  e par
+
+        //-______________________________Função Geradora_________________________________________________________________________________-
+
+        function* cores(){//funçao que retorna as interaçoes
+            yield 'preto';
+            yield 'azul';
+            yield 'amarelo';
+            yield 'castanho';
+            yield 'verde';
+        }
+
+        for(let c of cores()){
+            console.log(c)
+        }
+        //yield serve para devolver o controle ao usuario
+        const c2=cores()
+
+        console.log(c2.next())//retorna o primeiro
+        console.log(c2.next())//retorna o segundo
+
+        function* cont(n){
+            let c=0
+            while(c<n){
+                consolo.log(c)
+                c++
+            }
+        }
+        function* cont2(n){
+            let c=0
+            while(c<n){
+                yield consolo.log(c)//a cada yield executa e para
+                c++
+            }
+        }
+
+        const ct=cont(19)
+        console.log(ct)//não vai ler
+        console.log(ct.next())//vai ler
+
+        //____________________________________________________________________________________________________________
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

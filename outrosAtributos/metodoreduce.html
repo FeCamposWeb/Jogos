@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         let num=[0,1,2,3,4,5]
+         let soma=num.reduce((n1,n2)=>{//vai somar os dois primeiros elementos e vai enviar o resultado em soma depois vai pegar outros dois
+            return n1+n2
+         })
+
+         let pessoa=[
+             {nome:'Bruno',idade:40},
+             {nome:'Bruno',idade:40}
+         ]
+
+         let nomes=pessoa.reduce((p1,p2)=>{
+            p1.push(p2.nome)
+            return p1
+         },[])
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

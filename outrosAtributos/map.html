@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let produtos = new Map()
+        produtos.set("01","Mause")
+        produtos.set("02","Cpu")
+        produtos.set("03","Ups")
+        produtos.set("04","teclado")
+        .set("05","Hd")
+        .set("05","Hd")//outra forma de adicionar
+
+        produtos.size//retorna o numero de elementos
+        produtos.get("01")//retorna o elemento com essa chave
+
+        let produtos2 = new Map(["01","Mause"],["02","Monitor"])
+
+        for(p of produtos2)
+            console.log(p[1])//vai ler so as chaves
+
+        produtos.delete("03")//deletar o elemento com a chave 3
+        produtos2.clear()//elimina todos os elementos
+
+        let produtos3 = new Map(["01",["Mause","Mause321"]],["02",["Monitor","Monitor345"]])
+        for(p of produtos3)
+            console.log(p[1][1])//vai ler mause321 e monitor345
+
+        
+        function info(chave,valor){
+            console.log("chave"+chave+"valor"+valor)
+        }
+        produtos2.forEach(info)//automaticamente isere os valores nos parametros
+
+        let it=produtos2.keys()
+        console.log(it.next().value)//imprime o primeiro valor da chave
+
+        let it2=produtos2.values
+        console.log(it2.next().value)//imprime o primeiro valor não a chave
+
+        console.log(produtos2.has(02))//vai retornar true ou false se o elemento existir
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

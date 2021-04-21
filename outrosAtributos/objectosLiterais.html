@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const Carro={
+            marca:"VW",
+            modelo:"Golf",
+            info:function(){
+                console.log("Marca;" +this.marca)
+                console.log("Modelo;" +this.modelo)
+            }
+        }
+
+        console.log(Carro.marca)//imprime a marca
+        Carro.info()
+
+        Carro.modelo="pw"//redefinir o dado
+
+        Carro["marca"]="Bugat"//outra forma de redefinir
+
+        console.log(Carro["marca"])//vai imprimir a marca
+
+        let c2=Object.create(Carro)//c2 sera uma instrancia de carro com os mesmos valores
+
+        const Caracteristica={
+            cor:"verde",
+            cambio:"automatico"
+        }
+
+        const Veiculo=Object.assign(Carro,Caracteristica)
+
+        delete Caracteristica.cor//eliminar um elemento
+
+        const Carro2={
+
+            marca:"VW",
+            modelo:"Golf",
+            info:function(){
+                console.log("Marca;" +this.marca)
+                console.log("Modelo;" +this.modelo)
+            }
+        }
+
+        let(marca,modelo) = Carro2
+
+        console.log(marca)//vai ler do carro2
+        console.log(modelo)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

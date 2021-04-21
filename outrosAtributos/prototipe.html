@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        Object.prototype
+
+        class Barco{
+            constructor(cor){
+                this.cor=cor
+                this.velocidade=100
+                console.log("Ola, sou um novo carro"+this.cor)
+            }
+
+        }
+
+        Barco.prototype.potencia=0
+        Barco.prototype.vmax=0//definindo novas variaves para esta classe
+
+        let b1= new Barco("Azul")
+
+        b1.potencia
+
+        Barco.prototype.info3=function(){
+            console.log("Ola, sou um novo carro"+this.cor)//criando um metodo novo
+        }
+        Barco.prototype.info=function(){//sobrescrevendo o metodo info da classe Barco
+            console.log("Ola, sou um novo carro"+this.cor)
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

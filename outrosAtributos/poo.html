@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Carro{
+            cor="azul"
+            constructor(){
+                this.velocidade=100
+                console.log("Ola, sou um novo carro"+this.cor)
+            }
+
+        }
+
+        let c1=new Carro()
+        let c2=new Carro()
+        let c3=new Carro()
+        let c4=new Carro()
+
+        class Barco{
+            constructor(cor){
+                this.cor=cor
+                this.velocidade=100
+                console.log("Ola, sou um novo carro"+this.cor)
+            }
+
+        }
+
+        let core= new Barco("Azul")
+
+        //______________________________________________________________________________________________________________
+
+        class Pessoa{
+
+            static alerta=true
+
+            constructor(idade,peso,altura,cor){
+               this.cor=cor
+               this.idade=idade
+               this.peso=peso
+               this.altura=altura
+               this.nome="Fernando"
+               this.andar=true
+               this.sang=3900
+            }
+            info(){
+                console.log("cor:"+this.cor+(Carro.alerta ? "sim":"nao"))
+            }
+
+            ligar(){
+                this.andar=true
+            }
+            desligar(){
+                this.andar=false
+            }
+            setSang(v){
+                this.sang=v
+            }
+            set setSang2(v){//usar o set
+                this.sang=v
+            }
+
+            getsang(){
+                return this.sang;
+            }
+
+            get getsang(){
+                return this.sang;
+            }
+
+            get alertarr(){
+                return Pessoa.alerta
+            }
+
+            set alertar(t){
+                Pessoa.alerta=t
+            }
+
+        }
+
+
+        
+        let p1=new Pessoa("preto")
+
+        p1.setSang2=23//vantagem se usar set
+        p1.setSang(24)
+        p1.alertar=false
+        Carro.alerta=true
+
+        p1.getsang
+
+        p1.info()
+
+        p1.cor="branco";
+        
+        //____________________________________________________________________________________________________________
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

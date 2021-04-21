@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function contar2(n){
+            let cont=0
+            let p=new Promise((resolve,rejeita)=>{
+                for(let i=0;i<n;i++)
+                    cont++
+                if(cont==n)
+                    resolve(cont)
+                else
+                    rejeita("erro")
+            })
+            return p    
+        }
+
+        async function contPTA(n){//serve para melhorar a funçáo promess
+            const r= await contar2(n)
+            console.log(r)
+
+        }
+
+        contPTA(10)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function ativo(){
+        var elemento=document.activeElement.tagName;//recebe o valor da tag ativa tagname,id,class,value
+        var elemento=document.activeElement;
+        //onmouseup tipo de evemto para mause ao liberar o mause.
+        var elemento=document.activeElement.value;//pega todo contrudo
+        var se=document.activeElement.value.substring(elemento.selectionStart,elemento.selectionEnd);//capta apenas o elemento selecionado
+
+        document.hasFocus();//retorna tru se a pagina estiver em foco       
+    }
+    function inicia(){
+
+
+    }
+    window.addEventListener("load",inicia);
+</script>
+
+</head>
+<body onclick="ativo()">
+    
+</body>
+</html>
